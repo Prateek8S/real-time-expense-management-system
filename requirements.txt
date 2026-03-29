@@ -1,0 +1,9 @@
+numpy
+pandas
+notebook
+fastapi
+openpyxl
+mysql-connector-python
+streamlit
+uvicorn
+python-dotenv
