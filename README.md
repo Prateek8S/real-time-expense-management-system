@@ -22,13 +22,6 @@ A full-stack application for tracking personal or business expenses in real time
 
 The application follows a three-tier client-server architecture:
 
-
-┌──────────────┐       HTTP        ┌──────────────┐       SQL        ┌──────────────┐
-│   Streamlit  │  ──────────────►  │   FastAPI    │  ─────────────►  │    MySQL     │
-│   Frontend   │  ◄──────────────  │   Backend    │  ◄─────────────  │   Database   │
-└──────────────┘    JSON responses └──────────────┘    Query results └──────────────┘
-
-
 1. Users interact with the Streamlit interface to view, add, update, or delete expenses.
 2. Each action triggers an HTTP request (GET or POST) to the FastAPI backend.
 3. The backend processes the request, executes the corresponding database operation via MySQL, and returns the response.
