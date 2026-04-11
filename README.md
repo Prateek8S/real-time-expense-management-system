@@ -22,7 +22,12 @@ A full-stack application for tracking personal or business expenses in real time
 
 The application follows a three-tier client-server architecture:
 
-![architecture diagram of the real-time expense management system](architecture-diagram.png)
+
+┌──────────────┐       HTTP        ┌──────────────┐       SQL        ┌──────────────┐
+│   Streamlit  │  ──────────────►  │   FastAPI    │  ─────────────►  │    MySQL     │
+│   Frontend   │  ◄──────────────  │   Backend    │  ◄─────────────  │   Database   │
+└──────────────┘    JSON responses └──────────────┘    Query results └──────────────┘
+
 
 1. Users interact with the Streamlit interface to view, add, update, or delete expenses.
 2. Each action triggers an HTTP request (GET or POST) to the FastAPI backend.
@@ -212,13 +217,15 @@ pytest tests/
 
 Tests cover fetching expenses for valid and invalid dates, as well as insert and delete operations.
 
----
 
 ## Demonstration
 
 > Visit the following link to see how the application works : https://bit.ly/4uTLwEJ
 
+
 ---
+---
+
 
 ## License
 
